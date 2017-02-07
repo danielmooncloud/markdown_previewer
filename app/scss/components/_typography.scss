@@ -1,0 +1,18 @@
+
+
+@include font-face('Orbitron');
+
+
+body {
+	color: $bright-green;
+}
+
+.col1, .col2 {
+	font-family: 'Orbitron';
+}
+
+.textArea {
+	font-family: 'Orbitron';
+	font-size: 18px;
+	color: $bright-green;	
+}

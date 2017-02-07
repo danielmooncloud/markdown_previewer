@@ -18,10 +18,12 @@ module.exports = {
 			{
 				test: /\.scss$/,
 				loader: "style-loader!css-loader!sass-loader"
+			},
+			{
+				test: /\.jpg$/,
+				loader: "url-loader"
 			}
 		]
-	},
-	// plugins: [
-	// 	new webpack.optimize.UglifyJsPlugin({minimize: true, compress: {warnings: false}})
-	// ]
+	}
+	
 }

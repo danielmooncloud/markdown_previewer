@@ -1,4 +1,25 @@
 body {
-	background: lightblue;
-	height: 900px;
+	@include image('background');
+	background-size: cover;
+}
+
+#container {
+	@include opacity(0);
+}
+
+
+.col1, .col2 {
+	@include opacity(.5);
+	@extend %border;
+}
+
+.textArea {
+	@include opacity(.5);
+}
+
+textarea {
+	@extend %border;
+	&:focus {
+		outline: none;
+	}
 }
