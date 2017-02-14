@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var GhPagesWebpackPlugin = require('gh-pages-webpack-plugin');
 
 module.exports = {
 	context: __dirname + '/app',
@@ -24,6 +25,15 @@ module.exports = {
 				loader: "url-loader"
 			}
 		]
-	}
-	
+	},
+
+	plugins: [
+    	new GhPagesWebpackPlugin({
+        	path: './public',
+        	user: {
+                name: 'Markdown Preivewer',
+                email: 'danielmooncloud@gmail.com'
+            }
+    	})
+	]	
 }
