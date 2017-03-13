@@ -8,8 +8,7 @@ export default class DisplayArea extends React.Component{
 	}
 
 	render() {
-		return (
-			
+		return (		
 			<div className="col2">	
 				<div	
 					readOnly 
