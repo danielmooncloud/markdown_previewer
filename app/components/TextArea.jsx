@@ -21,9 +21,9 @@ export default class TextArea extends React.Component{
 		return (
 			<div className="col1">
 				<textarea 
-						className="textArea" 
-						value={this.state.text} 
-						onChange={this.handleChange.bind(this)}>
+					className="textArea" 
+					value={this.state.text} 
+					onChange={this.handleChange.bind(this)}>
 				</textarea>
 			</div>
 		)

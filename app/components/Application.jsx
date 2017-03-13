@@ -3,6 +3,9 @@ import marked from 'marked';
 import TextArea from './TextArea.jsx';
 import DisplayArea from './DisplayArea.jsx';
 
+
+
+
 export default class Application extends React.Component{
 	constructor(props) {
 		super(props);
