@@ -1,31 +1,26 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 
-export default class DisplayArea extends React.Component{
+const DisplayArea = (props) => {
 	
-	createMarkUp() {
-		return {__html: this.props.displayText}
-	}
-
-	render() {
-		return (		
-			<div className="col2">	
-				<div	
-					readOnly 
-				 	className="textArea" 
-				 	id="display" 
-				 	dangerouslySetInnerHTML={this.createMarkUp()}>
-				</div>	
-			</div>
-
-		)
-	}
+	return (		
+		<div className="col2">	
+			<div	
+				readOnly 
+			 	className="textArea" 
+			 	id="display" 
+			 	dangerouslySetInnerHTML={props.markdown}>
+			</div>	
+		</div>
+	)
+	
 }
-
-
-
 
 
 DisplayArea.propTypes = {
-	displayText: React.PropTypes.string.isRequired
+	markdown: PropTypes.shape({
+		__html: PropTypes.string.isRequired
+	}).isRequired
 }
+
+export default DisplayArea;

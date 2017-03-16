@@ -1,20 +1,13 @@
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 
 
-export default class TextArea extends React.Component{
-	
+export default class TextArea extends Component {
 	constructor(props) {
-		super(props);
-		this.state = {
-			text: this.props.initialText
-		}
+		super(props);	
 	}
 
 	handleChange(e) {
 		this.props.changeText(e.target.value);
-		this.setState({
-			text: e.target.value
-		})
 	}
 
 	render() {
@@ -22,7 +15,7 @@ export default class TextArea extends React.Component{
 			<div className="col1">
 				<textarea 
 					className="textArea" 
-					value={this.state.text} 
+					value={this.props.text} 
 					onChange={this.handleChange.bind(this)}>
 				</textarea>
 			</div>
@@ -31,7 +24,7 @@ export default class TextArea extends React.Component{
 }
 
 TextArea.propTypes = {
-	initialText: React.PropTypes.string.isRequired,
-	changeText: React.PropTypes.func.isRequired
+	text: PropTypes.string.isRequired,
+	changeText: PropTypes.func.isRequired
 }
 
