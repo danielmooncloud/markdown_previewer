@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component, PropTypes} from "react";
 
 
 export default class TextArea extends Component {
@@ -19,12 +19,12 @@ export default class TextArea extends Component {
 					onChange={this.handleChange.bind(this)}>
 				</textarea>
 			</div>
-		)
+		);
 	}
 }
 
 TextArea.propTypes = {
 	text: PropTypes.string.isRequired,
 	changeText: PropTypes.func.isRequired
-}
+};
 
