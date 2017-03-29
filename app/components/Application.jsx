@@ -1,7 +1,7 @@
-import React, {Component, PropTypes} from 'react';
-import marked from 'marked';
-import TextArea from './TextArea.jsx';
-import DisplayArea from './DisplayArea.jsx';
+import React, {Component, PropTypes} from "react";
+import marked from "marked";
+import TextArea from "./TextArea.jsx";
+import DisplayArea from "./DisplayArea.jsx";
 
 
 export default class Application extends Component {
@@ -13,7 +13,7 @@ export default class Application extends Component {
 			markdown: {
 				__html: marked(this.props.initialText.text)
 			}		
-		}
+		};
 	}
 
 	changeText(text) {
@@ -22,7 +22,7 @@ export default class Application extends Component {
 			markdown: {
 				__html: marked(text)
 			}
-		})
+		});
 	}
 
 	render() {
@@ -36,12 +36,12 @@ export default class Application extends Component {
 				<DisplayArea 
 					markdown={this.state.markdown}/>
 			</div>
-		)
+		);
 	}
-};
+}
 
 Application.propTypes = {
 	initialText: PropTypes.shape({
 		text: PropTypes.string.isRequired
 	}).isRequired
-}
+};
